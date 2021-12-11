@@ -9,16 +9,14 @@ import { Route, BrowserRouter } from "react-router-dom";
 import Auth from "./features/auth/Auth";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <BrowserRouter>
-        <div>
-          <Route exact path="/" component={Auth} />
-          <Route exact path="/tasks" component={App} />
-        </div>
-      </BrowserRouter>
-    </Provider>
-  </React.StrictMode>,
+  <Provider store={store}>
+    <BrowserRouter>
+      <div>
+        <Route exact path="/" component={Auth} />
+        <Route exact path="/tasks" component={App} />
+      </div>
+    </BrowserRouter>
+  </Provider>,
   document.getElementById("root")
 );
 
